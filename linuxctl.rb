@@ -5,21 +5,21 @@
 class Linuxctl < Formula
   desc "Declarative Linux host configuration — plan, apply, verify, rollback."
   homepage "https://github.com/itunified-io/linuxctl"
-  version "2026.04.11.8"
+  version "2026.04.11.9"
   license "AGPL-3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/itunified-io/linuxctl/releases/download/v2026.04.11.8/linuxctl_2026.04.11.8_darwin_amd64.tar.gz"
-      sha256 "e289537684bb353ff288e80ee6407f77fe2ab93e96a622267f81b6fd2096905c"
+      url "https://github.com/itunified-io/linuxctl/releases/download/v2026.04.11.9/linuxctl_2026.04.11.9_darwin_amd64.tar.gz"
+      sha256 "da3b348a57531de20c8f4f893e8565d1be0d0a3fbe83f801fcef83eedda3c463"
 
       define_method(:install) do
         bin.install "linuxctl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/itunified-io/linuxctl/releases/download/v2026.04.11.8/linuxctl_2026.04.11.8_darwin_arm64.tar.gz"
-      sha256 "19ef1848917f9bae92e8c828d65061718253388c7eb44f4286f28305fc169445"
+      url "https://github.com/itunified-io/linuxctl/releases/download/v2026.04.11.9/linuxctl_2026.04.11.9_darwin_arm64.tar.gz"
+      sha256 "c6ddd3e30de06a204bc1a2bd19ceb4b4c280bf9f6124970cceeebc07302e262c"
 
       define_method(:install) do
         bin.install "linuxctl"
@@ -29,15 +29,15 @@ class Linuxctl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/itunified-io/linuxctl/releases/download/v2026.04.11.8/linuxctl_2026.04.11.8_linux_amd64.tar.gz"
-      sha256 "11162920800a03acb9cac850319b91e9bfb3f6931f84e764de1e200dbcba7001"
+      url "https://github.com/itunified-io/linuxctl/releases/download/v2026.04.11.9/linuxctl_2026.04.11.9_linux_amd64.tar.gz"
+      sha256 "613ca9b8e403698432b51f29587f67a61888fe49fac59e1266f78a2d04f85199"
       define_method(:install) do
         bin.install "linuxctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/itunified-io/linuxctl/releases/download/v2026.04.11.8/linuxctl_2026.04.11.8_linux_arm64.tar.gz"
-      sha256 "591c3ca2ecaa9bf41df1a77a27afa6ee425a3ed7aa1708a47dc02aa9514f37f4"
+      url "https://github.com/itunified-io/linuxctl/releases/download/v2026.04.11.9/linuxctl_2026.04.11.9_linux_arm64.tar.gz"
+      sha256 "81092a22c6977ef84e5e15d71dc35865b05cb23eafdc27ab9e5a0bc7dab42abb"
       define_method(:install) do
         bin.install "linuxctl"
       end
