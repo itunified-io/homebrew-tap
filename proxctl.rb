@@ -5,21 +5,21 @@
 class Proxctl < Formula
   desc "Proxmox VM provisioning CLI — kickstart, lifecycle, workflows"
   homepage "https://github.com/itunified-io/proxctl"
-  version "2026.05.04.5"
+  version "2026.05.04.6"
   license "AGPL-3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/itunified-io/proxctl/releases/download/v2026.05.04.5/proxctl_2026.05.04.5_darwin_amd64.tar.gz"
-      sha256 "0f250d5c918fc66ea2f51f94d07a1f60ad3528b6e6e8a86a2e7725ff5fcbb198"
+      url "https://github.com/itunified-io/proxctl/releases/download/v2026.05.04.6/proxctl_2026.05.04.6_darwin_amd64.tar.gz"
+      sha256 "15f7d776452808630a11c5464aaa9772cdf62f60f9defa3956efc8b0e930a05e"
 
       define_method(:install) do
         bin.install "proxctl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/itunified-io/proxctl/releases/download/v2026.05.04.5/proxctl_2026.05.04.5_darwin_arm64.tar.gz"
-      sha256 "0cef1841f05875ceea550e8ca3007e4a6a424b29e29dfa94200591987105a650"
+      url "https://github.com/itunified-io/proxctl/releases/download/v2026.05.04.6/proxctl_2026.05.04.6_darwin_arm64.tar.gz"
+      sha256 "3e773ea79deef13a8c0d4eba03e6b0b1e813211efc5d22b645844ce4b7c42cda"
 
       define_method(:install) do
         bin.install "proxctl"
@@ -29,15 +29,15 @@ class Proxctl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/itunified-io/proxctl/releases/download/v2026.05.04.5/proxctl_2026.05.04.5_linux_amd64.tar.gz"
-      sha256 "6a916d5947af8151731a76480a2fc87d453ae87089ab3dbb3101f42a254db7e3"
+      url "https://github.com/itunified-io/proxctl/releases/download/v2026.05.04.6/proxctl_2026.05.04.6_linux_amd64.tar.gz"
+      sha256 "4c366a02bd1199f20e257204ea968812582db395febb099d8669739829f1875a"
       define_method(:install) do
         bin.install "proxctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/itunified-io/proxctl/releases/download/v2026.05.04.5/proxctl_2026.05.04.5_linux_arm64.tar.gz"
-      sha256 "2cabae1796ea503fbc38e1531ac9eec8e50a110f6e96e58a491d7e212345bdd6"
+      url "https://github.com/itunified-io/proxctl/releases/download/v2026.05.04.6/proxctl_2026.05.04.6_linux_arm64.tar.gz"
+      sha256 "626f628461881a22178518daf49a950fe0d411244852fdff00d11cf065aa83bc"
       define_method(:install) do
         bin.install "proxctl"
       end
